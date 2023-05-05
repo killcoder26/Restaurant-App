@@ -1,0 +1,16 @@
+{
+  "cartItems": [
+    {
+      "id": 1,
+      "dishID": 2,
+      "dishName": "Chicken Sandwich",
+      "dishDescription": "Delicious Toasted Crisp and Tender Chicken Sandwich with Chutney",
+      "dishPrice": 499,
+      "dishQuantity": 1,
+      "dishImage": "https://www.indianhealthyrecipes.com/wp-content/uploads/2016/07/chicken-sandwich-with-mayo-500x375.jpg",
+      "dishNature": "NonVeg",
+      "isDeleted": false,
+      "dishCategory": null
+    }
+  ]
+}

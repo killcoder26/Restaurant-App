@@ -1,0 +1,36 @@
+<section id="home_bg">
+    <div id="intro_2">
+        <div class="search_bar">
+            <input type="text" placeholder="Search" [(ngModel)]="filterString" />
+        </div>
+        <div class="tiles_2">
+            <div class="cardItem" *ngFor="let dishItem of dishList | search:filterString">
+                <div class='main'>
+                    <img class='tokenImage' src={{dishItem.dishImage}} alt="DishItem" />
+                    <h2>{{dishItem.dishName}}</h2>
+                    <p class='description'>{{dishItem.dishDescription}}</p>
+                    <img id="dishNature" *ngIf="dishItem.dishNature==='Veg'" src="../../assets/images/veg_icon.png" />
+                    <img id="dishNature" *ngIf="dishItem.dishNature==='NonVeg'"
+                        src="../../assets/images/non_veg_icon.png" />
+                    <div class='tokenInfo'>
+                        <div class="price">
+                            <p>₹ {{dishItem.dishPrice}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div><a [routerLink]="['/editDish/',dishItem.dishID]"><img class="edit_dish"
+                            src="../../../assets/images/pencil.png" /></a>
+                </div>
+                <div><button (click)="deleteItem(dishItem.dishID)"><img class="delete"
+                            src="../../../assets/images/delete.png" /></button>
+                    <button (click)="addtocart(dishItem.dishID)"><img class="cart"
+                            src="../../../assets/images/cart.png" /></button>
+                </div>
+            </div>
+            <div class="NoCard" *ngIf="dishList?.length==0">
+                <div class="Text1">No Data Available Here!!</div>
+            </div>
+            <div><a routerLink="/createdish"><img class="add" src="../../../assets/images/add-sign.png" /></a></div>
+        </div>
+    </div>
+</section>

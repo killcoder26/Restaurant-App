@@ -1,0 +1,75 @@
+<div class="page-wrapper  p-t-180 p-b-100">
+    <div class="wrapper wrapper--w960">
+        <div class="card card-2">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Edit Dish</h2>
+                <form>
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Dish Name"
+                            [(ngModel)]="dishDetails.dishName" name="dishName">
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" placeholder="Dish Description"
+                                    [(ngModel)]="dishDetails.dishDescription" name="dishDesc">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" placeholder="Dish Price"
+                                    [(ngModel)]="dishDetails.dishPrice" name="dishPrice">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" placeholder="Dish Image"
+                                    [(ngModel)]="dishDetails.dishImage" name="dishImage">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2">
+                                    <select class="form-select form-select-md col px-md-5" [(ngModel)]="menuName"
+                                        name="menuName">
+                                        <option *ngFor="let options of menuList">
+                                            {{options.menuName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2">
+                                        <select class="form-select form-select-md col px-md-30"
+                                            [(ngModel)]="categoryName" name="categoryName">
+                                            <option *ngFor="let options of categoryList">
+                                                {{options.categoryName}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="rs-select2">
+                            <select class="form-select form-select-md col px-md-3" [(ngModel)]="dishDetails.dishNature"
+                                name="dishNature">
+                                <option>Veg</option>
+                                <option>NonVeg</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                    <div class="p-t-30">
+                        <button class="btn btn--radius btn--green" type="button" (click)="formSubmit()">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

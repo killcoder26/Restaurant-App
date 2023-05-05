@@ -1,0 +1,30 @@
+.search_bar {
+    user-select: none;
+    width: 30rem;
+    border: 1px solid #ffffff22;
+    background-color: #000000;
+    background: linear-gradient(0deg, #fe62626e 0%, rgba(118, 118, 118, 0.5) 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: 0.7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    transition: 0.5s all;
+    margin-left: 25rem;
+    height: 2rem;
+}
+
+input {
+    background: none;
+    border: none;
+    height: 2rem;
+    width: 30rem;
+    color: #fff;
+    padding-left: 2rem;
+    border-radius: 0.7rem;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 1.2rem;
+}

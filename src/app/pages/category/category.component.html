@@ -1,0 +1,25 @@
+<section id="home_bg">
+    <div id="intro_2">
+        <div class="tiles">
+            <div class="cardItem" *ngFor="let category of categoryList">
+                <div class='main' (click)="goToDishes(category.categoryName)">
+                    <img class='tokenImage' src={{category.categoryImage}} alt="MenuItem" />
+                    <h2>{{category.categoryName}}</h2>
+                    <p class='description'>{{category.categoryDesc}}</p>
+                    <div class='tokenInfo'>
+                        <div class="price">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div><a [routerLink]="['/editCategory/',category.categoryId]"><img class="edit"
+                            src="../../../assets/images/pencil.png" /></a>
+                </div>
+            </div>
+            <div class="NoCard" *ngIf="categoryList?.length==0">
+                <div class="Text1">No Data Available Here!!</div>
+            </div>
+            <div><a routerLink="/createcategory"><img class="add" src="../../../assets/images/add-sign.png" /></a></div>
+        </div>
+    </div>
+</section>

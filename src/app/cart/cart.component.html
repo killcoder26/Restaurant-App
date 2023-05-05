@@ -1,0 +1,27 @@
+<div class="shopping-cart">
+    <div class="title">
+        Food Cart
+    </div>
+    <div class="item" *ngFor="let cart of cartList">
+        <div class="buttons">
+        </div>
+        <div class="image">
+            <img src={{cart.dishImage}} alt="" width="150" />
+        </div>
+        <div class="description">
+            <span>{{cart.dishName}}</span>
+            <span>{{cart.dishDescription}}</span>
+        </div>
+        <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+                <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
+            </button>
+            <input type="text" name="name" value={{cart.dishQuantity}}>
+            <button class="minus-btn" type="button" name="button">
+                <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
+            </button>
+        </div>
+        <div class="total-price">₹ {{cart.dishPrice}}</div>
+    </div>
+    <div class="item" *ngIf="!cartList">No Items in Cart</div>
+</div>

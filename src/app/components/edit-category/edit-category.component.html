@@ -1,0 +1,45 @@
+<div class="page-wrapper  p-t-180 p-b-100">
+    <div class="wrapper wrapper--w960">
+        <div class="card card-2">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Edit Category</h2>
+                <form>
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Category Name"
+                            [(ngModel)]="categoryDetails.categoryName" name="categoryName">
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" placeholder="Category Description"
+                                    [(ngModel)]="categoryDetails.categoryDesc" name="categoryDesc">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" placeholder="Category Image"
+                                    [(ngModel)]="categoryDetails.categoryImage" name="categoryImage">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2">
+                                    <select class="form-select form-select-md col px-md-5"
+                                        [(ngModel)]="categoryForm.menuName" name="menuName">
+                                        <option *ngFor="let options of menuList">
+                                            {{options.menuName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-t-30">
+                        <button class="btn btn--radius btn--green" type="button" (click)="formSubmit()">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

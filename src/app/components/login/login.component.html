@@ -1,0 +1,22 @@
+<div class="login_container">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup]="loginForm">
+        <h3>Login Here</h3>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username" formControlName="user">
+        <span style="color: rgb(255, 51, 0)" *ngIf="user && user.invalid && user.touched">Please Enter a valid
+            username</span>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" formControlName="pass">
+        <span style="color: rgb(255, 51, 0)" *ngIf="pass && pass.invalid && pass.touched">Please Enter a valid
+            password</span>
+        <button (click)="loginAdmin()">Log In</button>
+        <div class="social">
+            <div class="go"><i src="../../../assets/google.svg"></i> Google</div>
+            <div class="fb"><i src="../../../assets/facebook-f.svg"></i> Facebook</div>
+        </div>
+    </form>
+</div>

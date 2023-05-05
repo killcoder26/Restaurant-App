@@ -1,0 +1,23 @@
+<section id="home_bg">
+    <div id="intro">
+        <div class="cards">
+            <div class="tiles">
+                <div class="nft" *ngFor="let menuItem of menuList">
+                    <div class='main' (click)="goToCategory(menuItem.menuName)">
+                        <img class='tokenImage' src={{menuItem.menuImage}} alt="MenuItem" />
+                        <h2>{{menuItem.menuName}}</h2>
+                        <p class='description'>{{menuItem.menuDescription}}</p>
+                        <div class='tokenInfo'>
+                        </div>
+                        <a [routerLink]="['/editMenu/',menuItem.menuId]"><img class="edit"
+                                src="../../../assets/images/pencil.png" /></a>
+                    </div>
+                </div>
+                <div class="NoCard" *ngIf="menuList.length==0">
+                    <div class="Text1">No Data Available Here!!</div>
+                </div>
+                <div><a routerLink="/createmenu"><img class="add" src="../../../assets/images/add-sign.png" /></a></div>
+            </div>
+        </div>
+    </div>
+</section>

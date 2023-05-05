@@ -1,0 +1,34 @@
+<div class="page-wrapper  p-t-180 p-b-100">
+    <div class="wrapper wrapper--w960">
+        <div class="card card-2">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Create Menu</h2>
+                <form>
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Menu Name"
+                            [(ngModel)]="menuForm.menuName" name="menuName">
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" placeholder="Menu Description"
+                                    [(ngModel)]="menuForm.menuDescription" name="menuDesc">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" placeholder="Menu Image"
+                                    [(ngModel)]="menuForm.menuImage" name="menuImage">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-t-30">
+                        <button class="btn btn--radius btn--green" type="button" (click)="formSubmit()">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
